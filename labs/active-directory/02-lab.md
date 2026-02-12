@@ -25,9 +25,4 @@ Set up a Windows Server domain, join a client VM, and manage users and groups.
 7. Joined Windows 10 client VM to domain
 8. Verified logins and group policies
 
-## Screenshots
-- Save screenshots in `screenshots/active-directory/`
-- Reference like:
-```markdown
-![AD Users](../../screenshots/active-directory/ad-users.png)
-![Client Join](../../screenshots/active-directory/client-join.png)
+
