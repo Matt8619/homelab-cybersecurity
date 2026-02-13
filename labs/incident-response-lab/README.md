@@ -56,7 +56,7 @@ The EICAR test file was downloaded to the system. Microsoft Defender immediately
 
 
 
-!\[Detection Alert](screenshots/defender-ir/screenshot-01-detection.png)
+![Detection Alert](screenshots/screenshot-01-detection.png)
 
 
 
