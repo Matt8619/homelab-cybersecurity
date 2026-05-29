@@ -1,7 +1,3 @@
-This is a strong, professional foundation. To make it more effective for recruiters, I have tightened the language, improved the structure, and organized your labs so the "Table of Contents" matches the folder structure you just built.
-
----
-
 # Cybersecurity & IT Engineering Portfolio
 
 This repository serves as a technical record of my self-hosted cybersecurity and systems engineering laboratory. It documents my progression through virtualization, network security, and offensive/defensive methodologies using a "build-from-scratch" approach.
