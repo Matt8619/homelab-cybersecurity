@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Project: Automated SOC Security Pipeline (Wazuh SIEM)
 Overview
 This project is an automated, virtualized Security Operations Center (SOC) lab environment. The goal was to build a self-healing security monitoring stack that could ingest telemetry from heterogeneous endpoints (Windows/Linux) and provide automated threat visibility via a custom-built API interface.
