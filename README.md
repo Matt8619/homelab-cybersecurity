@@ -1,39 +1,41 @@
-Cybersecurity & IT Home Lab
-Overview
-This repository documents a self-hosted cybersecurity and IT home lab built using Proxmox. The lab is designed to demonstrate hands-on experience with virtualization, networking, system administration, and security monitoring.
+This is a strong, professional foundation. To make it more effective for recruiters, I have tightened the language, improved the structure, and organized your labs so the "Table of Contents" matches the folder structure you just built.
 
-Lab Environment
-Proxmox VE on Dell OptiPlex 3050 Micro
-Ubuntu Server, Kali Linux, Windows Server, Windows 10/11
-Raspberry Pi 4 for auxiliary services
-Gigabit Ethernet networking
-Skills Demonstrated
-Virtualization and VM management
-Active Directory administration
-Networking (DNS, DHCP, TCP/IP)
-Vulnerability scanning and risk analysis
-Log collection and monitoring (SIEM)
-Incident detection and response
-Backup and recovery
-Technical documentation
-Labs
-# Homelab Cybersecurity Portfolio
+---
 
-Hands-on cybersecurity labs demonstrating skills in network enumeration, web exploitation, and defensive analysis.
+# Cybersecurity & IT Engineering Portfolio
 
-## Labs
+This repository serves as a technical record of my self-hosted cybersecurity and systems engineering laboratory. It documents my progression through virtualization, network security, and offensive/defensive methodologies using a "build-from-scratch" approach.
 
-- [DVWA Web Exploitation](labs/dvwa/lab-01-dvwa-web-exploitation.md)
+## Lab Infrastructure
 
-- [Nmap Network Enumeration](labs/nmap/lab-01-nmap-enumeration.md)
+* **Hypervisor:** Proxmox VE (Dell OptiPlex 3050 Micro).
+* **Network:** Dedicated VLANs for isolated segment testing.
+* **Operating Systems:** Ubuntu Server, Debian, Kali Linux, Windows Server 2022, Windows 10/11.
+* **Hardware:** Auxiliary services hosted on Raspberry Pi 4.
 
-- [SOC Log Analysis](labs/soc/lab-01-soc-log-analysis.md)
+## Core Competencies
 
-Proxmox Baseline Setup
-Active Directory Administration
-Network Services (DNS/DHCP)
-Centralized Logging and SIEM
-Vulnerability Scanning
-Incident Response Simulation
-Ethical Notice
-All activities were performed in a controlled lab environment on systems I own. No unauthorized scanning or exploitation was conducted.
+* **Virtualization & Orchestration:** Proxmox management and VM life-cycle deployment.
+* **Network Security:** DNS/DHCP configuration, TCP/IP traffic analysis, and firewalling.
+* **Offensive Security:** Network enumeration, vulnerability research, and web application exploitation.
+* **Defensive Operations:** SIEM (Wazuh) integration, log parsing, threat detection, and incident response.
+
+---
+
+## Lab Directory
+
+*Explore my detailed case studies for each technical domain:*
+
+| Category | Lab Focus |
+| --- | --- |
+| **Active Directory** | Baseline infrastructure, Group Policy, and LLMNR poisoning simulations. |
+| **DVWA** | Web application exploitation and OWASP Top 10 mitigation strategies. |
+| **Metasploitable** | Vulnerability scanning and exploitation life-cycle. |
+| **SOC Operations** | SIEM log ingestion, behavioral analysis, and alert triage. |
+| **Wazuh Automation** | Custom Python middleware for automated SIEM telemetry and API management. |
+
+---
+
+## Ethical Statement
+
+All activities documented in this repository were performed within an isolated, self-hosted laboratory environment on hardware I own. No unauthorized scanning, exploitation, or reconnaissance was conducted against external infrastructure.
