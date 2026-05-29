@@ -1,38 +1,34 @@
-Project: Automated SOC Security Pipeline (Wazuh SIEM)
-Overview
-This project is an automated, virtualized Security Operations Center (SOC) lab environment. The goal was to build a self-healing security monitoring stack that could ingest telemetry from heterogeneous endpoints (Windows/Linux) and provide automated threat visibility via a custom-built API interface.
+### Automated SOC Security Pipeline: Technical Architecture & Implementation
 
-Instead of relying solely on the built-in GUI, I engineered a Python-based automation framework to bridge the gap between raw SIEM data and actionable security intelligence.
+This project details the development of an automated, virtualized Security Operations Center (SOC) lab environment designed for high-fidelity telemetry ingestion and threat visibility. The framework replaces traditional GUI dependency with a custom Python-based automation engine to bridge the gap between raw SIEM data and actionable intelligence.
 
-Architecture
-Virtualization: Proxmox (Host) running Ubuntu 22.04 (Wazuh Manager).
+#### Lab Infrastructure & Architecture
 
-Endpoints: Windows 11 Enterprise (matt12) and Debian Bookworm.
+The lab environment is architected for scalability and security monitoring through the following stack:
 
-Security Stack: Wazuh v4.14 (All-in-One Deployment).
+* **Hypervisor**: Proxmox VE hosting an Ubuntu 22.04 Wazuh Manager.
+* **Endpoints**: Windows 11 Enterprise (matt12) and Debian Bookworm.
+* **Security Stack**: Wazuh v4.14 (All-in-One deployment).
+* **Automation Interface**: Custom `ai_soc_analyst.py` wrapper, utilizing `requests` for JWT-authenticated API interactions.
 
-Automation: Custom Python ai_soc_analyst.py wrapper utilizing requests for JWT-authenticated API interaction.
+#### Key Engineering Achievements
 
-Key Engineering Wins
-Infrastructure Resilience: Resolved complex process-pool failures within the Wazuh API daemon, requiring manual reconstruction of the SQLite-based rbac.db and credential synchronization.
+* **Infrastructure Resilience**: Addressed critical process-pool failures in the Wazuh API daemon by performing manual reconstruction of the `rbac.db` SQLite database and re-synchronizing credentials.
+* **Custom Security Middleware**: Engineered a middleware tool capable of automated API authentication, token lifecycle management, and dynamic telemetry parsing to monitor critical security daemons in real-time.
+* **Threat Hunting Pipeline**: Implemented a telemetry pipeline that bypasses static dashboard constraints, enabling programmatic querying of system-inventory and vulnerability data directly from endpoint agents.
 
-Security Automation: Developed a custom middleware tool that authenticates against the SIEM API, handles token management, and dynamically parses telemetry to provide real-time status of critical security daemons.
+#### Incident Lifecycle Simulation
 
-Threat Hunting Framework: Implemented a system-telemetry pipeline that bypasses static dashboard limitations, allowing for programmatic querying of vulnerability and system-inventory data directly from the endpoint agents.
+The environment facilitates full-spectrum incident response testing:
 
-Lab Highlights & Simulation
-This environment is used to simulate the full lifecycle of an incident:
+* **Red Team**: Simulates lateral movement, brute-force attacks, and File Integrity Monitoring (FIM) modifications.
+* **Blue Team**: Utilizes Wazuh’s native policy-monitoring and FIM modules for detection.
+* **Triage**: Employs the `ai_soc_analyst` tool to automate alert parsing, significantly reducing the latency between initial log trigger and incident visibility.
 
-Red Team: Execution of lateral movement, brute-force simulations, and file-integrity modifications on Windows/Linux nodes.
+#### Repository Organization
 
-Blue Team: Detection via Wazuh's FIM and policy-monitoring modules.
+The environment is structured to support rapid restoration and modular development:
 
-Triage: Automation of alert parsing using a Python-based analyst tool, reducing the time from "log trigger" to "incident visibility."
-
-Repository Structure
-/scripts/ai_soc_analyst.py: The core automation engine for API communication and threat detection.
-
-/docs/troubleshooting_log.md: A technical breakdown of the infrastructure challenges and resolutions.
-
-/config/: Simplified deployment configurations for rapid environment restoration.
-
+* `/scripts/ai_soc_analyst.py`: Core automation engine for threat detection and API communication.
+* `/docs/troubleshooting_log.md`: Detailed documentation of infrastructure challenges and technical resolutions.
+* `/config/`: Modular deployment configurations for rapid environment recovery.
