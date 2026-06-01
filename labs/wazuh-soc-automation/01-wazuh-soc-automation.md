@@ -42,5 +42,5 @@ To validate that the logging pipeline was correctly ingesting and parsing securi
 The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
 
 ### Filtered Security Events Table
-![Wazuh Telemetry Table](../../screenshots/wazuh-telemetry.png)
+![Wazuh Telemetry Table](../../ssh_alerts_table.png)
 The log telemetry clearly visualizes three concurrent authentication failures targeting the non-existent user `roto` originating from the malicious attacker host IP (`192.168.1.51`).
