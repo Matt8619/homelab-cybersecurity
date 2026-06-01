@@ -42,6 +42,5 @@ To validate that the logging pipeline was correctly ingesting and parsing securi
 The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
 
 ### Filtered Security Events Table
-![SSH Brute Force Alerts Table](ssh_alerts_table.png)
-
+![Wazuh Server API Troubleshooting](Screenshot 2026-05-30 090524.png)
 The log telemetry clearly visualizes three concurrent authentication failures targeting the non-existent user `roto` originating from the malicious attacker host IP (`192.168.1.51`).
