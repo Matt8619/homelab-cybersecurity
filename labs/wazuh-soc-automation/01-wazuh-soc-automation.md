@@ -32,3 +32,16 @@ The environment is structured to support rapid restoration and modular developme
 * `/scripts/ai_soc_analyst.py`: Core automation engine for threat detection and API communication.
 * `/docs/troubleshooting_log.md`: Detailed documentation of infrastructure challenges and technical resolutions.
 * `/config/`: Modular deployment configurations for rapid environment recovery.
+
+ ---
+
+## Lab Verification & Telemetry Analysis
+
+To validate that the logging pipeline was correctly ingesting and parsing security logs from our endpoints, a simulated brute-force attack was executed against the target environment. 
+
+The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
+
+### Filtered Security Events Table
+![SSH Brute Force Alerts Table](ssh_alerts_table.png)
+
+The log telemetry clearly visualizes three concurrent authentication failures targeting the non-existent user `roto` originating from the malicious attacker host IP (`192.168.1.51`).
