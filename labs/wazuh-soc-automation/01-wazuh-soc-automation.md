@@ -45,4 +45,4 @@ The Wazuh indexer successfully caught the attack signature, parsing out the spec
 
 ### Filtered Security Events Table
 ![Wazuh Telemetry Table](../../screenshots/wazuh-soc-automation/ssh_alerts_table.png)
-The log telemetry clearly visualizes three concurrent authentication failures targeting the non-existent user `roto` originating from the malicious attacker host IP (`192.168.1.51`).
+The log telemetry clearly visualizes three concurrent authentication failures targeting the non-existent user `roto` originating from the malicious attacker host IP 
