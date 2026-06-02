@@ -41,7 +41,6 @@ The environment is structured to support rapid restoration and modular developme
 To validate that the logging pipeline was correctly ingesting and parsing security logs from our endpoints, a simulated brute-force attack was executed against the target environment. 
 ![Wazuh API Connection Status](../../screenshots/wazuh-soc-automation/wazuh_api_connection.png)
 The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
-The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
 
 ### Filtered Security Events Table
 ![Wazuh Telemetry Table](../../screenshots/wazuh-soc-automation/ssh_alerts_table.png)
