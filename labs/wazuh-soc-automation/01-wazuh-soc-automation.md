@@ -22,8 +22,6 @@ The lab environment is architected for scalability and security monitoring throu
 The environment facilitates full-spectrum incident response testing:
 
 * **Red Team**: Simulates lateral movement, brute-force attacks, and File Integrity Monitoring (FIM) modifications.
-* **Red Team**: Simulates lateral movement, brute-force attacks, and File Integrity Monitoring (FIM) modifications.
-
 ![Kali Linux SSH Brute-Force Simulation](../../screenshots/wazuh-soc-automation/ssh_bruteforce_kali.png)
 * **Blue Team**: Utilizes Wazuh’s native policy-monitoring and FIM modules for detection.
 * **Triage**: Employs the `ai_soc_analyst` tool to automate alert parsing, significantly reducing the latency between initial log trigger and incident visibility.
