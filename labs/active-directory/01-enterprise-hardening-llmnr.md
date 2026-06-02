@@ -5,16 +5,11 @@ This project details the deployment of a virtualized corporate Active Directory 
 
 ---
 
-## 1. Infrastructure Architecture
-To simulate a corporate corporate environment realistically, a dedicated virtual lab network was engineered with strict resource and network isolation.
+## 1. Environment Architecture & Topology
+To simulate a corporate network realistically, a dedicated virtual lab network was engineered with strict resource and network isolation within a hypervisor sandbox environment.
 
-### Host Hardware
-* **System:** Dell OptiPlex 3050 Micro
-* **Compute:** 16 GB RAM
-* **Networking:** Gigabit Ethernet
-
-### Hypervisor Layer & Topology
-The environment is segmented using an isolated virtual switch within **Proxmox VE**, cutting off external internet traffic while permitting localized machine-to-machine routing.
+### Hypervisor Layer
+The entire environment is segmented using an isolated virtual switch configuration within **Proxmox VE**, cutting off external internet traffic while permitting localized machine-to-machine routing.
 
 | Hostname | Role / Operating System | IP Address Allocation | Purpose |
 | :--- | :--- | :--- | :--- |
@@ -23,7 +18,7 @@ The environment is segmented using an isolated virtual switch within **Proxmox V
 
 ---
 
-## 2. Active Directory Domain Services Initialization & Tiering
+## 2. Active Directory Services Initialization & Tiering
 Before enforcing security baselines, the core identity infrastructure was provisioned from scratch.
 
 1. **Active Directory Domain Services (AD DS):** Promoted `DC-SERVER-01` to a primary Domain Controller, establishing the internal forest root domain: `lab.local`.
@@ -46,7 +41,7 @@ A new GPO titled **"SecOps-Account-Hardening"** was generated and linked to the 
 
 * **Minimum Password Length:** Enforced a strict minimum of **14 characters** to resist computational offline cracking speeds.
 * **Complexity Requirements:** Enabled advanced filtering (requiring uppercase letters, lowercase letters, numbers, and symbols).
-* **Account Lockout Threshold:** Restriced consecutive invalid logon attempts to a maximum of **5 failures** to block automated brute-force attacks.
+* **Account Lockout Threshold:** Restricted consecutive invalid logon attempts to a maximum of **5 failures** to block automated brute-force attacks.
 
 ![Group Policy Password Controls](../../screenshots/active-directory/gpo_password_policy.png)
 
