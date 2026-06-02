@@ -22,6 +22,9 @@ The lab environment is architected for scalability and security monitoring throu
 The environment facilitates full-spectrum incident response testing:
 
 * **Red Team**: Simulates lateral movement, brute-force attacks, and File Integrity Monitoring (FIM) modifications.
+* **Red Team**: Simulates lateral movement, brute-force attacks, and File Integrity Monitoring (FIM) modifications.
+
+![Kali Linux SSH Brute-Force Simulation](../../screenshots/wazuh-soc-automation/ssh_bruteforce_kali.png)
 * **Blue Team**: Utilizes Wazuh’s native policy-monitoring and FIM modules for detection.
 * **Triage**: Employs the `ai_soc_analyst` tool to automate alert parsing, significantly reducing the latency between initial log trigger and incident visibility.
 
@@ -38,7 +41,8 @@ The environment is structured to support rapid restoration and modular developme
 ## Lab Verification & Telemetry Analysis
 
 To validate that the logging pipeline was correctly ingesting and parsing security logs from our endpoints, a simulated brute-force attack was executed against the target environment. 
-
+![Wazuh API Connection Status](../../screenshots/wazuh-soc-automation/wazuh_api_connection.png)
+The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
 The Wazuh indexer successfully caught the attack signature, parsing out the specific rule alerts and source attribution details below:
 
 ### Filtered Security Events Table
